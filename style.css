@@ -12,11 +12,10 @@ body {
 .layout {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto auto;
-    /* grid-gap: 20px 20px;*/
+    grid-template-rows: auto auto auto;
 }
 .header {
-    background-image: url("images/background1.jpg");
+    background-image: url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -40,10 +39,9 @@ body {
     width: 160px;
     height: auto;
     border-radius: 50%;
-    border: 3px solid white; 
     margin: auto;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-top: 80px;
 }
 
 .nav-left {
@@ -54,8 +52,6 @@ body {
     margin-top: 0;
     padding: 0;
     white-space: nowrap;
-    /*-webkit-column-rule: white solid 1px;*/
-    /* border-right: 1px solid white; */
 }
 
 .header a {
@@ -83,96 +79,63 @@ ul {
     list-style-type: circle;
 }
 
-​a:visited, a:link, a:hover
-{
+​a:visited, a:link, a:hover {
     text-decoration: none;
 }
  
-
 .content {
     justify-content: center;
-    /* border: 5px double whitesmoke; */
     text-align: center;
     font-size: 1.4em;
-    line-height: 1.5;
-    font-family: 'Poppins', cursive, sans-serif;
+    line-height: 2.0;
+    font-family: 'Oswald', sans-serif;
     align-items: center;
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+    
 }
 
 h3 {
     font-size: 1.5em;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Sniglet', sans-serif;
 }
 
-.skills h3 {
-    text-align: start;
-}
-
-.aboutme {
-    margin: 70px;
-    padding: 10px;
+.aboutme, .skills, .interests, .contact {
+    padding: 50px 100px;
     border: 4px double whitesmoke;
+    height: 100%;
 }
 
 .aboutme img {
     width: 300px;
-    padding: 50px;
-}
-
-.skills {
-    margin: 50px; 
-    /*padding: 10px;*/
-    border: 4px double whitesmoke;
-    /* padding-right: 200px;*/
-    display: inline-block;
-    margin-top: 130px;
-
-}
-
-.interests {
-    /*margin-bottom: 100px;*/
-    padding: 100px;
-    border: 4px double whitesmoke;
-    margin: 20px;
-    margin-top: 0px;
 }
 
 .interests img {
-    width: 400px;
-    margin-top: -100px;
-}
-
-.contact {
-    margin: 40px;
-    padding: 5px;
-    border: 4px double whitesmoke;
-    margin-top: -61px;
+    width: 300px;
 }
 
 .contact img {
     width: 300px;
-    margin: 90px;
-    margin-bottom: 0px;
 }
 
-.footer {
-    grid-column: 1 / 3;
-    grid-gap: 4 / 5;
-    text-align: center;
-    color: white;
-    font-size: 1.1em;
+.icons {
+    padding: 20px;
 }
 
-.skills1{
-    display: inherit;
-    padding: 15px;
+.icons a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.icons a:hover {
+    color: #4C5694;
 }
 
 .skills1 img {
     width: 300px;
-    padding: 20px;
     transform: rotate(10deg);
-    /*transition-duration: 2s;*/
 }
 
 .skills1 img:hover {
@@ -183,9 +146,60 @@ h3 {
 }
 
 @media (max-width: 480px) {
-    .content {
+
+    .layout {
         display: grid;
-        grid-template-columns: auto;
-        grid-row-template: min-content;
+        grid-template-columns: 100%;
+        grid-row-template: auto auto auto;
     }
+
+    .header {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .nav-left {
+        text-align: center;
+    }
+
+    .content {
+        grid-column: 1;
+        margin: 0px;
+        padding: 0px;
+        word-wrap: break-word;
+    }
+
+    .aboutme, .skills, .interests, .contact  {
+        margin: 0px;
+        padding: 5px;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-template: auto auto auto;
+    }
+
+    .header {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .nav-left {
+        text-align: center;
+    }
+
+    .content {
+        grid-column: 1;
+        margin: 0px;
+        padding: 0px;
+        word-wrap: break-word;
+    }
+
 }
